@@ -1,0 +1,8 @@
+<h1>Home page</h1>
+  <% @post.each do |post| %>
+    <div class="alert alert-light">
+      <h4><%= post.title %></h4>
+      <p><%= post.body %></p>
+      <%= link_to "Read all", post_path(post), :class => 'btn btn-primary'%>
+    </div>
+  <%end%>

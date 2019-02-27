@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tre</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+      <h3 class="my-0 mr-md-auto font-weight-bold">Itra</h3>
+        <nav class="my-2 my-md-0 mr-md-3">
+          <span class="p-2 text-dark"><%= link_to "Home page", home_path %></span>
+          <span class="p-2 text-dark"><%= link_to "About me", about_path %></span>
+          <span class="p-2 text-dark"><%= link_to "Add post", new_post_path %></span>
+        </nav>
+      <span><%= link_to "Sign up", new_user_path,  :class => 'btn btn-lg btn-primary'%></span>
+    </div>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+  </body>
+</html>
